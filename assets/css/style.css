@@ -1,0 +1,35 @@
+body{
+	background-image: url(../images/yoga.jpg);
+	width: 100%;
+	
+}
+
+.jumbotron{
+	border:5px solid #000;
+	background-color: transparent;
+	color: #000;
+	margin-top: 20px;
+	height: 700px;
+	width: 1000px;
+	padding: 20px;
+
+}
+.display-3{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+
+#image-holder {
+
+        /* Positioning */
+         margin: 0 auto;
+
+        /* Box-model */
+        width: 400px;
+
+        /* Typography */
+        text-align: center;
+
+      }
