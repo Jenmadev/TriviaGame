@@ -1,6 +1,7 @@
 body{
-	background-image: url(../images/yoga.jpg);
+	background-image: url(../images/track.jpg);
 	width: 100%;
+
 	
 }
 
@@ -31,5 +32,13 @@ body{
 
         /* Typography */
         text-align: center;
+}
+.btn-primary{
+	background-color: #000;
+	border-color: #000;
+}
 
-      }
+.btn-primary:hover{
+	background-color: #02cac8;
+	border-color: #02cac8;
+}    
