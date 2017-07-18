@@ -14,9 +14,9 @@ var unansweredQuestions;
 
 //  Our stopwatch object.
 var stopwatch = {
-  time: 10,
+  time: 30,
   reset: function() {
-    stopwatch.time = 10;  
+    stopwatch.time = 30;  
   },
   start: function() {
       console.log("start");
@@ -41,7 +41,7 @@ var stopwatch = {
 }
 
 
-console.log("dave");
+
 //Start Game
 $("#startButton").click(getQuestions);
 
@@ -81,10 +81,12 @@ function displayQuestion(){
 	question = questions[currentQuestion];
 	
 	var choices = '<span class ="choice">' + question.correct_answer +'</span>';
+
 	for(var i = 0; i < question.incorrect_answers.length; i++){
-		choices += ('<span class ="choice">' + question.incorrect_answers[i] +'</span>');
+		Math.floor(Math.random()*4);
+		choices += ('</br> <span class ="choice">' + question.incorrect_answers[i] +'</span>');
 	}
-	$("#display").html("Time Remaining: "+ '<span id="timecounter">10</span>');
+	$("#display").html("Time Remaining: "+ '<span id="timecounter">30</span>');
 	$("#question").html("Question " + (currentQuestion +1) + ": " + question.question);
 	$("#choices").html(choices);
 	$(".choice").click(function(){

@@ -1,8 +1,14 @@
 body{
 	background-image: url(../images/track.jpg);
 	width: 100%;
-
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	color: #000;
 	
+}
+h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 42px;
 }
 
 .jumbotron{
@@ -41,4 +47,27 @@ body{
 .btn-primary:hover{
 	background-color: #02cac8;
 	border-color: #02cac8;
-}    
+}
+.choice{
+	margin-bottom: 5px;
+}
+.choice:hover{
+	background-color: #02cac8;
+	border-color: #02cac8;
+	font-weight: bold;
+}
+
+#question{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 24px;
+
+}
+#display{
+	font-weight: bold;
+	text-align: right;
+}
+#startButton{
+	font-size: 30px;
+	font-weight: bold;	
+}
