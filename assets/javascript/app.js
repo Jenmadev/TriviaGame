@@ -69,7 +69,7 @@ function getQuestions(){
 function gameOver(){
 	$("#startButton").show();
 	$("#result").empty();
-	$("#result").html("Here are your results: </br> Correct Answers: " + correctQuestions + "</br> Wrong Answers: " + incorrectQuestions + "</br> No Answers: " + unansweredQuestions);
+	$("#result").html("HERE ARE YOUR RESULTS: </br> CORRECT ANSWERS: " + correctQuestions + "</br> WRONG ANSWERS: " + incorrectQuestions + "</br> UNANSWERED ANSWERS: " + unansweredQuestions);
 }
 
 function displayQuestion(){
@@ -79,11 +79,13 @@ function displayQuestion(){
 	$("#display").show();
 	stopwatch.reset();
 	question = questions[currentQuestion];
+
+	question.incorrect_answers.push(question.correct_answer);
+	question.incorrect_answers.sort(function(a, b){return 0.5 - Math.random()});
 	
-	var choices = '<span class ="choice">' + question.correct_answer +'</span>';
+	var choices = "";
 
 	for(var i = 0; i < question.incorrect_answers.length; i++){
-		Math.floor(Math.random()*4);
 		choices += ('</br> <span class ="choice">' + question.incorrect_answers[i] +'</span>');
 	}
 	$("#display").html("Time Remaining: "+ '<span id="timecounter">30</span>');
@@ -127,6 +129,6 @@ function resultMessage(correctanswer,scenario){
 		gameOver();
 	}
 	else{
-		setTimeout(displayQuestion, 3000);
+		setTimeout(displayQuestion, 1000);
 	}
 }
